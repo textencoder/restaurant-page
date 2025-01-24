@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 60%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+}
+
+header {
+    border: 1px solid black;
+    
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-content: center;
+        height: 100%;
+        gap: 50px;
+    }
+
+    button {
+        padding: 10px 0;
+        background: none;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+}
+
+#content {
+    border: 1px solid black;
+}
