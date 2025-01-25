@@ -2,6 +2,7 @@ console.log('server initialized')
 
 import './styles.css';
 import Home from './home.js';
+import appendTest from './menu.js';
 
 const homeButton = document.getElementById('home');
 const menuButton = document.getElementById('menu');
@@ -14,3 +15,5 @@ homeButton.addEventListener('click', () => {
         document.querySelector('#content').append(value);
     }
 })
+
+appendTest();
