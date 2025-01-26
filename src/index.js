@@ -3,6 +3,7 @@ console.log('server initialized')
 import './styles.css';
 import Home from './home.js';
 import appendTest from './menu.js';
+import aboutSection from './about.js';
 
 const homeButton = document.getElementById('home');
 const menuButton = document.getElementById('menu');
@@ -23,4 +24,9 @@ homeButton.addEventListener('click', () => {
 menuButton.addEventListener('click', () => {
     content.innerHTML = '';
     appendTest();
+})
+
+aboutButton.addEventListener('click', () => {
+    content.innerHTML = '';
+    aboutSection();
 })

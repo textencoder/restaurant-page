@@ -17,11 +17,14 @@ body {
     height: 90%;
     display: grid;
     grid-template-rows: 1fr 10fr;
+    justify-content: center;
+}
+
+#content {
+    width: 600px;
 }
 
 header {
-    
-    
 
     nav {
         display: grid;
@@ -55,7 +58,6 @@ header {
     text-align: center;
     line-height: 1.5;
     
-
     #img {
         border: 1px solid black;
         width: 60%;
@@ -107,8 +109,4 @@ header {
     align-items: center;
     text-align: center;
     line-height: 1.5;
-}
-
-#content {
-    border: 1px solid black;  
 }
