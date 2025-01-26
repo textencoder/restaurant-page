@@ -10,6 +10,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(116, 59, 33);
 }
 
 body {
@@ -22,6 +23,10 @@ body {
 
 #content {
     width: 600px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 20px 40px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -32,6 +37,7 @@ header {
         place-content: center;
         height: 100%;
         gap: 50px;
+        color: whitesmoke;
     }
 
     button {
@@ -40,6 +46,7 @@ header {
         border: none;
         cursor: pointer;
         font-size: 0.9rem;
+        color: whitesmoke;
     }
 
     button:hover {
@@ -59,9 +66,7 @@ header {
     line-height: 1.5;
     
     #img {
-        border: 1px solid black;
-        width: 60%;
-        height: 25%;
+        width: 50%;
     }
 }
 
