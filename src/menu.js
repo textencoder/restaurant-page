@@ -5,15 +5,18 @@ const section = document.createElement("section");
 // const desserts = document.createElement('div');
 // const drinks = document.createElement('div');
 
-const menuItems = {
-  "Avocado Crab Toast": 12,
+const menuObject = {
   "Korean BBQ Cauliflower Bites": 9,
-  "Maple-Braised Short Ribs": 22,
+  "Avocado Crab Toast": 12,
+
   "Herb-Crusted Rocky Mountain Trout": 19,
-  "Matcha Cheesecake Tart": 10,
+  "Maple-Braised Short Ribs": 22,
+
   "Honey Lavender Panna Cotta": 9,
-  "Cranberry Sage Mule": 8,
+  "Matcha Cheesecake Tart": 10,
+
   "Smoky Old Fashioned": 7,
+  "Cranberry Sage Mule": 8,
 };
 
 export default function appendTest() {
@@ -29,18 +32,26 @@ export default function appendTest() {
       subSection.appendChild(scopedItem);
     }
   }
-
-  console.log(section);
   section.id = "menu-section";
+
+  idAssign();
 
   document.querySelector("#content").appendChild(section);
 
-  idAssign();
   classAssign();
+  setHeadings();
   addPrices();
 }
 
 const divId = ["Starters", "Entrees", "Desserts", "Drinks"];
+
+function setHeadings() {
+  const headings = document.querySelectorAll("h2");
+
+  for (let i = 0; i < divId.length; i++) {
+    headings[i].innerText = divId[i];
+  }
+}
 
 function idAssign() {
   const divs = document.querySelectorAll("div");
@@ -58,6 +69,12 @@ function classAssign() {
       paragraphs[i].classList.add("menu-item");
     }
   }
+
+  const menuItems = document.querySelectorAll(".menu-item");
+
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].textContent = Object.keys(menuObject)[i];
+  }
 }
 
 function addPrices() {
@@ -65,8 +82,13 @@ function addPrices() {
 
   for (let i = 0; i < paragraphs.length; i++) {
     if (i % 2 != 0) {
-      paragraphs[i].textContent = "price";
+      paragraphs[i].classList.add("price-item");
     }
   }
-  console.log(menuItems);
+
+  const priceItems = document.querySelectorAll(".price-item");
+
+  for (let i = 0; i < priceItems.length; i++) {
+    priceItems[i].textContent = Object.values(menuObject)[i];
+  }
 }
